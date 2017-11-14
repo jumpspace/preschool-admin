@@ -1,0 +1,156 @@
+<!doctype html>
+<!-- WITH OUR OWN TWO HANDS Registration Page -->
+<!--                                          -->
+<!-- Web Developer: JumpSpace Contracting     -->
+<!-- Version Number: 1.1.1                    -->
+<!-- - Reformatted the scheduling portion     -->
+<!-- - Use Firebase as database backend       -->
+<!-- - Switch to JQuery                       -->
+<!--   (utilities.js -> jquery-2.2.3.min.js)  -->
+<!-- - Created class list page                -->
+<!-- - Added menu navigation bar              -->
+<!-- - Included JQuery UI                     -->
+<!-- - Separated navbar css                   -->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Registration Page</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/mainstyle.css" />
+	  <link rel="stylesheet" href="css/navbar.css"/>
+  </head>
+  <body>
+    <!-- menu section -->
+    <div class="navbar-menu">
+      <p></p>
+      <ul class="menu-panel">
+        <li class="menu-items"><a class="menu-items" href="home.html">Home</a></li>
+        <li class="menu-items"><a class="menu-items" href="schedule.html">Schedule</a></li>
+        <li class="menu-items"><a class="menu-items" href="student.html">Student</a></li>
+        <li class="menu-items">Register</li>
+        <li class="menu-items"><a class="menu-items" href="class.html">Class</a></li>
+        <li class="menu-items"><a class="menu-items" href="sys.html">Settings</a></li>
+      </ul>
+    </div>
+
+    <!-- registration page -->
+    <div class="content-page">
+      <h1>Register Your Child</h1>
+      <p>This page allows you to enter your child's information in relation to the Two Hands preschool.</p>
+	  <p>Start of School Year: <span class="school-start"></span></p>
+      <form action="" method="post" id="frmReg" novalidate>
+        <fieldset>
+          <legend class="fsheader">Identification</legend>
+          <p class="fssubheader">Student Information: </p>
+          <div>
+            <label for="firstName" class="align-student">First Name: </label><input type="text" name="firstName" id="firstName" required />
+          </div>
+          <div>
+            <label for="lastName" class="align-student">Last Name: </label><input type="text" name="lastName" id="lastName" required />
+          </div>
+          <div>
+            <label for="dob" class="align-student">Birth Date: </label><input type="text" name="dob" id="dob" placeholder="mm/dd/yyyy" required />&nbsp;&nbsp;<span class="error" id="errMsg"></span>
+          </div>
+		  <div id="dob-year"></div>
+          <p class="fssubheader">Contact Information: </p>
+          <div>
+            <label for="contactFirstName" class="align-contact">First Name: </label>
+            <label for="contactLastName" class="align-contact">Last Name: </label>
+            <label for="contactPhone" class="align-contact">Phone: </label>
+          </div>
+          <div>
+            <input type="text" name="contactFirstName" id="contactFirstName" class="align-contact" />
+            <input type="text" name="contactLastName" id="contactLastName" class="align-contact" />
+            <input type="text" name="contactPhone" id="contactPhone" class="align-contact" placeholder="XXX-XXX-XXXX" />
+          </div>
+          <div>
+            <input type="text" name="contactFirstName2" id="contactFirstName2" class="align-contact" />
+            <input type="text" name="contactLastName2" id="contactLastName2" class="align-contact" />
+            <input type="text" name="contactPhone2" id="contactPhone2" class="align-contact" placeholder="XXX-XXX-XXXX" />
+          </div>
+          <div>
+            <input type="text" name="contactFirstName3" id="contactFirstName3" class="align-contact" />
+            <input type="text" name="contactLastName3" id="contactLastName3" class="align-contact" />
+            <input type="text" name="contactPhone3" id="contactPhone3" class="align-contact" placeholder="XXX-XXX-XXXX" />
+          </div>
+          <div>
+            <input type="text" name="contactFirstName4" id="contactFirstName4" class="align-contact" />
+            <input type="text" name="contactLastName4" id="contactLastName4" class="align-contact" />
+            <input type="text" name="contactPhone4" id="contactPhone4" class="align-contact" placeholder="XXX-XXX-XXXX" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="fsheader">Placement</legend>
+          <div>
+            <h2><label for="daysAttend">Days Attending: </label></h2>
+            <p>For each day select the portion of day the child will be attending</p>
+            <div>
+              <label class="day-week-top-mon" for="monday">Monday</label>
+              <label class="day-week-top-tue" for="tuesday">Tuesday</label>
+              <label class="day-week-top-wed" for="wednesday">Wednesday</label>
+              <label class="day-week-top-thu" for="thursday">Thursday</label>
+              <label class="day-week-top-fri" for="friday">Friday</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="monday" id="monday" value="monday" class="day-week-mid"></input>
+              <input type="checkbox" name="tuesday" id="tuesday" value="tuesday" class="day-week-mid"></input>
+              <input type="checkbox" name="wednesday" id="wednesday" value="wednesday" class="day-week-mid"></input>
+              <input type="checkbox" name="thursday" id="thursday" value="thursday" class="day-week-mid"></input>
+              <input type="checkbox" name="friday" id="friday" value="friday" class="day-week-mid"></input>
+            </div>
+
+						<select name="sched_mon" id="sched_mon" class="day-week-bot">
+              <option value="None">Not Attending</option>
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
+              <option value="AllDay">Both Morning &amp; Afternoon</option>
+            </select>
+
+            <select name="sched_tue" id="sched_tue" class="day-week-bot">
+              <option value="None">Not Attending</option>
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
+              <option value="AllDay">Both Morning &amp; Afternoon</option>
+            </select>
+
+            <select name="sched_wed" id="sched_wed" class="day-week-bot">
+              <option value="None">Not Attending</option>
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
+              <option value="AllDay">Both Morning &amp; Afternoon</option>
+            </select>
+
+            <select name="sched_thu" id="sched_thu" class="day-week-bot">
+              <option value="None">Not Attending</option>
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
+              <option value="AllDay">Both Morning &amp; Afternoon</option>
+            </select>
+
+            <select name="sched_fri" id="sched_fri" class="day-week-bot">
+              <option value="None">Not Attending</option>
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
+              <option value="AllDay">Both Morning &amp; Afternoon</option>
+            </select>
+
+            <p></p>
+            <label for="register"></label><input type="submit" value="Register" id="submit" />
+          </div>
+        </fieldset>
+        <p id="output"></p>
+        <p id="output2"></p>
+      </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/reg.js"></script>
+  </body>
+</html>

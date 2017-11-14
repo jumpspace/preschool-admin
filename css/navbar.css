@@ -1,0 +1,44 @@
+/* navbar.css */
+
+/* Menu Navigation Bar */
+.navbar-menu {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background-color: #9CD3A5; 
+}
+
+.menu-panel {
+  background-color: #9CD3A5;
+  list-style-type: none;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+.menu-items { 
+  font-family:
+    "Signika", 
+    "Candara", 
+	Helvetica, 
+	sans-serif;
+  color: #717070;
+  background-color: #9CD3A5;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  list-style-type: none;
+  text-decoration: normal;
+}
+
+.menu-items:hover {
+    list-style-type: square;
+}
+
+.menu-item-link {
+  color: #717070;
+  background-color: #9CD3A5;
+  text-decoration: normal;
+}
+
+.menu-item-link:hover {
+  text-decoration: underline;
+}
