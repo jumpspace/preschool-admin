@@ -1,0 +1,57 @@
+<!doctype html>
+<!-- WITH OUR OWN TWO HANDS System Page       -->
+<!--                                          -->
+<!-- Web Developer: JumpSpace Contracting     -->
+<!-- Version Number: 1.1.1                    -->
+<!-- - Created class list page                -->
+<!-- - Added menu navigation bar              -->
+<!-- - Included JQuery UI                     -->
+<!-- - Separated navbar css                   -->
+
+<html>
+  <head>
+    <title></title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/mainstyle.css" />
+		<link rel="stylesheet" href="css/navbar.css"/>
+  </head>
+  <body>  
+    <!-- menu section -->
+    <div class="navbar-menu">
+      <p></p>
+      <ul class="menu-panel">
+        <li class="menu-items"><a class="menu-items" href="home.html">Home</a></li>
+        <li class="menu-items"><a class="menu-items" href="schedule.html">Schedule</a></li>
+        <li class="menu-items"><a class="menu-items" href="student.html">Student</a></li>
+        <li class="menu-items"><a class="menu-items" href="register.html">Register</a></li>
+        <li class="menu-items"><a class="menu-items" href="class.html">Class</a></li>
+        <li class="menu-items">Settings</li>
+      </ul>
+    </div>
+    
+	<div class="content-page">
+      <h1>Configuration Screen</h1>
+      <form action="" method="post" id="frmConfig" novalidate>
+        <div>
+          <p id="output"></p>
+        </div>
+        <div>
+          <label for="schoolYear" class="jalign">Start Of School Year</label>
+          <input type="date" name="schoolYear" id="schoolYear" />
+          <input type="submit" value="Save" id="submit" />
+        </div>
+				<div>
+				  
+				  <select name="session" id=""></select>
+				</div>
+      </form>
+	</div>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/sysconfig.js"></script>
+  </body>
+</html>

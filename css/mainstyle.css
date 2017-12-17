@@ -1,0 +1,22 @@
+/* The main stylesheet */
+
+/* Overall look and feel */
+* { 
+  color: black; 
+  font-family: 
+    "Signika", 
+    "Candara", 
+	Helvetica, 
+	sans-serif;
+  background-color: #FFFFFF; 
+}
+
+/* Content */
+.content-page { 
+  position: absolute;
+  background-color: white;
+	height: 100%;
+	width: 90%;
+	left: 10%;
+	padding-left: 0.5px;
+}

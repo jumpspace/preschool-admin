@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- WITH OUR OWN TWO HANDS Class Page        -->
+<!--                                          -->
+<!-- Web Developer: JumpSpace Contracting     -->
+<!-- Version Number: 1.1.1                    -->
+<!-- - Created class list page                -->
+<!-- - Switch to JQuery                       -->
+<!--   (utilities.js -> jquery-2.2.3.min.js)  -->
+<!-- - Added menu navigation bar              -->
+<!-- - Included JQuery UI                     -->
+<!-- - Separated navbar css                   -->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Class List</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/mainstyle.css" />
+		<link rel="stylesheet" href="css/navbar.css"/>
+  </head>
+  
+  <body>
+    <!-- menu section -->
+    <div class="navbar-menu">
+      <ul class="menu-panel">
+        <li class="menu-items"><a class="menu-items" href="home.html">Home</a></li>
+        <li class="menu-items"><a class="menu-items" href="schedule.html">Schedule</a></li>
+        <li class="menu-items"><a class="menu-items" href="student.html">Student</a></li>
+        <li class="menu-items"><a class="menu-items" href="register.html">Register</a></li>
+        <li class="menu-items">Class</li>
+        <li class="menu-items"><a class="menu-items" href="sys.html">Settings</a></li>
+      </ul>
+    </div>
+	
+    <div class="content-page">
+			<h1>Class List</h1>
+			<p>Select a day to see the class list.</p>
+      <div>
+			  <label for="daychoice">Select: </label>
+				<select  name="daychoice" id="daychoice">
+					<option value="monday">Monday</option>
+					<option value="tuesday">Tuesday</option>
+					<option value="wednesday">Wednesday</option>
+					<option value="thursday">Thursday</option>
+					<option value="friday">Friday</option>
+				</select>
+			</div>
+			<div><p>*** Morning ***</p></div>
+      <div id="classlist-morning"></div>
+			<div><p>*** Afternoon ***</p></div>
+			<div id="classlist-afternoon"></div>
+		</div>
+    <script src="https://www.gstatic.com/firebasejs/3.0.4/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/class.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+/* registration page */
+
+.fssubheader {
+  text-decoration: underline;
+}
+
+.day-week-top-mon {
+  padding-right: 120px;
+  margin-right: 10px;
+}
+
+.day-week-top-tue {
+  padding-right: 120px;
+  margin-right: 10px;
+}
+
+.day-week-top-wed {
+  padding-right: 95px;
+  padding-left: 3px;
+  margin-right: 10px;
+}
+
+.day-week-top-thu {
+  padding-right: 117px;
+  margin-right: 10px;
+}
+
+.day-week-top-fri {
+  padding-right: 100px;
+  margin-right: 10px;
+}
+
+.day-week-mid {
+  margin-left: 0px;
+  margin-right: 175px;
+}
+
+.day-week-bot {
+	margin-left: 0px;
+	margin-right: 10px;
+}
+
+/* Make headers prominant */
+legend.fsheader {
+  font-weight: bold;
+}
+
+/* Align the labels of text boxes */
+label.align-student {
+  display: inline-block;
+  width: 95px;
+}
+
+label.align-contact {
+  display: inline-block;
+  width: 160px;
+}
+
+/* Error message */
+span.error { 
+  color: #E60000;
+  font-weight: bold;
+  background-color: #000000;
+}
+
+.school-start {
+  right: 20%; 
+}

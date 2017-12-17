@@ -1,0 +1,57 @@
+<!doctype html>
+<!-- WITH OUR OWN TWO HANDS Student Page      -->
+<!--                                          -->
+<!-- Web Developer: JumpSpace Contracting     -->
+<!-- Version Number: 1.1.1                    -->
+<!-- - Created class list page                -->
+<!-- - Added menu navigation bar              -->
+<!-- - Included JQuery UI                     -->
+<!-- - Separated navbar css                   -->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Student Page</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/mainstyle.css" />
+		<link rel="stylesheet" href="css/navbar.css"/>
+  </head>
+  
+  <body>  
+    <!-- menu section -->
+    <div class="navbar-menu">
+      <p></p>
+      <ul class="menu-panel">
+        <li class="menu-items"><a class="menu-items" href="home.html">Home</a></li>
+        <li class="menu-items"><a class="menu-items" href="schedule.html">Schedule</a></li>
+        <li class="menu-items">Student</li>
+        <li class="menu-items"><a class="menu-items" href="register.html">Register</a></li>
+        <li class="menu-items"><a class="menu-items" href="class.html">Class</a></li>
+        <li class="menu-items"><a class="menu-items" href="sys.html">Settings</a></li>
+      </ul>
+    </div>
+	
+	<div class="content-page">
+      <h1>Student Lookup</h1>
+      <p>Look up student records by first name:</p>
+      <div>
+        <label for="studentName">First Name: </label><input type="text" name="studentName" id="studentName" required />
+      </div>
+      <div>
+        <button type="button" name="details">Details</button>
+      </div>
+      <br />
+      <hr />
+      <div id="studentRecord">No records so far ...</div>
+      <br />
+      <div id="studentSchedule">No schedule so far ...</div>
+	</div>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/student.js"></script>
+  </body>
+</html>

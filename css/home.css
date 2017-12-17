@@ -1,0 +1,28 @@
+/* dashboard.css */
+.hm-general {
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	width:100px;
+}
+
+.info-line {
+	width: 90%;
+}
+
+.panel-left {
+	position: absolute;
+	width: 30%;
+}
+
+.panel-middle {
+	position: absolute;
+	left: 31%;
+	width: 30%;
+}
+
+.panel-right {
+	position: absolute;
+	left: 62%;
+	width: 30%;
+}
