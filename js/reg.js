@@ -53,7 +53,7 @@ function checkDate()
 
   if (dobval)
   {
-	dobDate = new Date(dobval);
+		dobDate = new Date(dobval);
     regDate = new Date(regVal);	
 	
     if (dobDate.getTime()) // valid date
@@ -129,14 +129,14 @@ function process()
   var dobval = $('#dob').val();
   
   var onComplete = function (error) { 
-    if (error) 
-	{ 
-      $('#output2').text('not successful'); 
-	} 
-	else 
-	{ 
-      $('#output2').text('successful'); 
-	} 
+		if (error) 
+		{ 
+			$('#output2').text('not successful'); 
+		} 
+		else 
+		{ 
+			$('#output2').text('successful'); 
+		} 
   }; 
   
   studentref.child(fname).set({ firstName: fname, lastName: lname, dateofbirth: dobval });
