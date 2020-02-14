@@ -1,3 +1,12 @@
+UPDATE: As of 2019, this web project is permanently 
+on hold. Firebase, the noSQL database back-end I 
+have been using for this project, has changed the 
+structure of their Realtime Database. As such, I 
+must now rewrite the entire application using the 
+new structure.
+
+-JmpSpc
+
 ==================================================
 PRESCHOOL ADMINISTRATION WEB PROJECT
 ==================================================
